@@ -1,0 +1,109 @@
+# Laravel
+laravel-api/.env
+laravel-api/.env.backup
+laravel-api/.env.*.php
+laravel-api/.phpunit.result.cache
+laravel-api/.phpunit.cache
+laravel-api/Homestead.json
+laravel-api/Homestead.yaml
+laravel-api/npm-debug.log
+laravel-api/yarn-error.log
+laravel-api/storage/logs/*
+laravel-api/storage/framework/cache/*
+laravel-api/storage/framework/sessions/*
+laravel-api/storage/framework/testing/*
+laravel-api/storage/framework/views/*
+laravel-api/bootstrap/cache/config.php
+
+# Node.js
+web/node_modules/
+web/npm-debug.log*
+web/yarn-debug.log*
+web/yarn-error.log*
+web/.env.local
+web/.env.development.local
+web/.env.test.local
+web/.env.production.local
+web/build/
+web/.DS_Store
+
+# React Native
+mobile/node_modules/
+mobile/.expo/
+mobile/.vscode/
+mobile/.watchmanconfig
+mobile/.env.local
+mobile/.env.development.local
+mobile/.env.test.local
+mobile/.env.production.local
+mobile/npm-debug.*
+mobile/yarn-debug.*
+mobile/yarn-error.*
+mobile/android/app/build/
+mobile/ios/build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
+*.sqlite
+*.db
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+
+# Composer
+laravel-api/vendor/
+laravel-api/composer.lock
+
+# PHPUnit
+laravel-api/tests/coverage/
+
+# Laravel specific
+laravel-api/public/storage
+laravel-api/public/hot
+laravel-api/public/storage
+
+# React specific
+web/coverage/
+web/.nyc_output/
+
+# Mobile specific
+mobile/coverage/
+mobile/.nyc_output/
+
+# Documentation build
+documentation/build/
+docs-mobile/build/
+
+# Environment files for all subdirectories
+**/.env
+**/.env.*
+**/config.js
+**/config.local.js

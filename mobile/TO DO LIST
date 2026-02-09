@@ -1,0 +1,120 @@
+✅ TODO – APPLICATION MOBILE (React Native ou Ionic)
+1️⃣ Mise en place technique
+
+Choisir la techno :
+
+✅ React Native ou Ionic
+
+Initialiser le projet
+
+Connecter l’application à :
+
+✅ API REST (Laravel)
+
+✅ Firebase (auth + notifications)
+
+2️⃣ Authentification
+
+Écran Inscription
+
+Nom
+
+Email
+
+Mot de passe
+
+Écran Connexion
+
+Gestion de session utilisateur
+
+Déconnexion
+
+3️⃣ Gestion des voitures
+
+Afficher la liste des voitures à réparer
+
+Voiture du client
+
+Réparations demandées
+
+Statut :
+
+En attente
+
+En réparation
+
+Terminée
+
+Détail d’une voiture :
+
+Type de réparations
+
+Prix total
+
+Durée estimée
+
+4️⃣ Suivi des réparations
+
+Voir si la voiture est :
+
+En cours de réparation
+
+Prête à être récupérée
+
+Rafraîchissement automatique des statuts (API / Firebase)
+
+5️⃣ Notifications
+
+Notification quand :
+
+✅ Les réparations sont terminées
+
+Utilisation de Firebase Cloud Messaging
+
+Notification visible même si l’app est fermée
+
+6️⃣ Paiement
+
+Bouton Payer
+
+Simulation de paiement (pas besoin de vrai paiement bancaire)
+
+Changement de statut après paiement :
+
+Voiture récupérée
+
+Slot libéré dans le garage
+
+7️⃣ Interface utilisateur (UI/UX)
+
+Design simple et professionnel
+
+Écrans minimum :
+
+Connexion / Inscription
+
+Liste des voitures
+
+Détails d’une voiture
+
+Paiement
+
+Feedback utilisateur :
+
+Loading
+
+Messages de succès / erreur
+
+8️⃣ Tests & finalisation
+
+Tester :
+
+Connexion
+
+Notifications
+
+Paiement
+
+Corriger bugs
+
+Préparer captures d’écran pour la documentation
