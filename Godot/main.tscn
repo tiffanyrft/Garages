@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dppclw03x8qld"]
+
+[ext_resource type="Script" uid="uid://rnem8iaaklj2" path="res://scripts/Main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cnjanic3166et" path="res://Garage.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bj4yl5mhvtqu2" path="res://Player.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://davgl08gj0bfr" path="res://Car.tscn" id="4_272bh"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1bvp3")
+
+[node name="Background" type="ColorRect" parent="."]
+color = Color(0.99999994, 0.8735082, 0.3230965, 1)
+
+[node name="Garage" parent="." instance=ExtResource("2_lquwl")]
+position = Vector2(0, -1)
+
+[node name="Car1" parent="." instance=ExtResource("4_272bh")]
+
+[node name="Car2" parent="." instance=ExtResource("4_272bh")]
+position = Vector2(-1, 62)
+
+[node name="Car3" parent="." instance=ExtResource("4_272bh")]
+position = Vector2(0, 126)
+
+[node name="Player" parent="." instance=ExtResource("3_7mycd")]
+position = Vector2(155, 67)

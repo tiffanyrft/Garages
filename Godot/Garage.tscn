@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnjanic3166et"]
+
+[ext_resource type="Script" uid="uid://c8gmdoymg73kx" path="res://scripts/Garage.gd" id="1_8w5a5"]
+
+[node name="Garage" type="Node2D"]
+script = ExtResource("1_8w5a5")
+
+[node name="RepairSlot1" type="Marker2D" parent="."]
+position = Vector2(22, 20)
+
+[node name="Visual" type="ColorRect" parent="RepairSlot1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 200.0
+offset_top = 37.0
+offset_right = 280.0
+offset_bottom = 77.0
+grow_horizontal = 2
+color = Color(0.15294118, 1, 0, 1)
+
+[node name="RepairSlot2" type="Marker2D" parent="."]
+position = Vector2(82, 21)
+
+[node name="Visual" type="ColorRect" parent="RepairSlot2"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 329.0
+offset_top = 36.0
+offset_right = 409.0
+offset_bottom = 76.0
+grow_horizontal = 0
+color = Color(0.9433943, 0.94339424, 2.3102762e-06, 1)
+
+[node name="WaitingSlot" type="Marker2D" parent="."]
+position = Vector2(53, 67)
+
+[node name="Visual" type="ColorRect" parent="WaitingSlot"]
+offset_left = 266.0
+offset_top = 109.0
+offset_right = 346.0
+offset_bottom = 149.0
+color = Color(0.79057974, 0.18982702, 0.92790955, 1)
