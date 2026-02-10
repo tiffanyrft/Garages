@@ -9,7 +9,7 @@ import {
   LogOut, 
   Menu,
   X,
-  Garage
+  Home
 } from 'lucide-react';
 
 const Header = () => {
@@ -35,7 +35,7 @@ const Header = () => {
   ];
 
   const publicMenuItems = [
-    { path: '/', label: 'Accueil', icon: Garage },
+    { path: '/', label: 'Accueil', icon: Home },
     { path: '/clients', label: 'Clients', icon: Users },
     { path: '/reparations', label: 'Réparations', icon: Car },
   ];
@@ -51,7 +51,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Garage className="h-8 w-8 text-primary-600" />
+              <Wrench className="h-8 w-8 text-blue-600" />
               <span className="text-xl font-bold text-gray-900">Garage Pro</span>
             </Link>
           </div>
@@ -66,7 +66,7 @@ const Header = () => {
                   to={item.path}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActivePath(item.path)
-                      ? 'bg-primary-100 text-primary-700'
+                      ? 'bg-blue-100 text-blue-700'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                   }`}
                 >
@@ -84,7 +84,7 @@ const Header = () => {
                 <span className="text-sm text-gray-700">
                   {user?.nom} {user?.prenom}
                   {user?.role === 'admin' && (
-                    <span className="ml-2 px-2 py-1 text-xs bg-primary-100 text-primary-700 rounded-full">
+                    <span className="ml-2 px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                       Admin
                     </span>
                   )}
@@ -100,7 +100,7 @@ const Header = () => {
             ) : (
               <Link
                 to="/login"
-                className="flex items-center space-x-2 px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
               >
                 <span>Connexion</span>
               </Link>
@@ -135,7 +135,7 @@ const Header = () => {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActivePath(item.path)
-                        ? 'bg-primary-100 text-primary-700'
+                        ? 'bg-blue-100 text-blue-700'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                     }`}
                   >
@@ -151,7 +151,7 @@ const Header = () => {
                 <div className="px-3 py-2 text-sm text-gray-700">
                   {user?.nom} {user?.prenom}
                   {user?.role === 'admin' && (
-                    <span className="ml-2 px-2 py-1 text-xs bg-primary-100 text-primary-700 rounded-full">
+                    <span className="ml-2 px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                       Admin
                     </span>
                   )}
