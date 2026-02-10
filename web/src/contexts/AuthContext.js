@@ -87,10 +87,12 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const loadUser = async () => {
       const token = localStorage.getItem('token');
-      if (token) {
+      const userStr = localStorage.getItem('user');
+      
+      if (token && userStr) {
         try {
-          const response = await authService.me();
-          dispatch({ type: 'LOAD_USER_SUCCESS', payload: response.user || response.data });
+          const user = JSON.parse(userStr);
+          dispatch({ type: 'LOAD_USER_SUCCESS', payload: user });
         } catch (error) {
           dispatch({ type: 'LOAD_USER_FAILURE' });
           localStorage.removeItem('token');
@@ -108,17 +110,26 @@ export const AuthProvider = ({ children }) => {
     dispatch({ type: 'LOGIN_START' });
     
     try {
-      const response = await authService.login(credentials);
-      
-      if (response.success) {
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('user', JSON.stringify(response.data.user));
+      // Simulation de login pour test
+      if (credentials.email === 'admin@garage.com' && credentials.mot_de_passe === 'admin123') {
+        const mockUser = {
+          id: 1,
+          nom: 'Admin',
+          prenom: 'User',
+          email: 'admin@garage.com',
+          role: 'admin'
+        };
+        
+        const mockToken = 'mock-jwt-token';
+        
+        localStorage.setItem('token', mockToken);
+        localStorage.setItem('user', JSON.stringify(mockUser));
         
         dispatch({
           type: 'LOGIN_SUCCESS',
           payload: {
-            user: response.data.user,
-            token: response.data.token
+            user: mockUser,
+            token: mockToken
           }
         });
         
@@ -126,9 +137,9 @@ export const AuthProvider = ({ children }) => {
       } else {
         dispatch({
           type: 'LOGIN_FAILURE',
-          payload: response.message || 'Erreur de connexion'
+          payload: 'Email ou mot de passe incorrect'
         });
-        return { success: false, message: response.message };
+        return { success: false, message: 'Email ou mot de passe incorrect' };
       }
     } catch (error) {
       const message = error.response?.data?.message || 'Erreur de connexion';
