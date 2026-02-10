@@ -6,7 +6,6 @@ import {
   Wrench, 
   DollarSign, 
   Clock,
-  TrendingUp,
   AlertCircle,
   CheckCircle
 } from 'lucide-react';
@@ -47,14 +46,14 @@ const AdminDashboard = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="bg-danger-50 border border-danger-200 text-danger-700 px-4 py-3 rounded-md">
+      <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md">
         {error}
       </div>
     );
