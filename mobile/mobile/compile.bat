@@ -1,1 +1,2 @@
+npm install expo
 npx expo start -c
