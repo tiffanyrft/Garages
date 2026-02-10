@@ -86,10 +86,11 @@ export const AuthProvider = ({ children }) => {
   // Charger l'utilisateur au démarrage
   useEffect(() => {
     const loadUser = async () => {
-      if (state.token) {
+      const token = localStorage.getItem('token');
+      if (token) {
         try {
           const response = await authService.me();
-          dispatch({ type: 'LOAD_USER_SUCCESS', payload: response.data });
+          dispatch({ type: 'LOAD_USER_SUCCESS', payload: response.user || response.data });
         } catch (error) {
           dispatch({ type: 'LOAD_USER_FAILURE' });
           localStorage.removeItem('token');
